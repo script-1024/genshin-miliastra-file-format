@@ -1,0 +1,6 @@
+{
+    "markdown.extension.completion.root": "${workspaceFolder}",
+    "markdown.styles": [
+        "res/style.css"
+    ]
+}
