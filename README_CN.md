@@ -1,8 +1,3 @@
-<head>
-    <link rel="stylesheet" href="https://raw.githubusercontent.com/script-1024/genshin-miliastra-file-format/refs/heads/main/res/style.css"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@32,320,0,0"/>
-</head>
-
 # 千星奇域导出文件的格式参考文档
 
 [English](/README.md) | 中文

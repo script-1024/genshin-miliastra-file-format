@@ -1,11 +1,4 @@
-<head>
-    <link rel="stylesheet" href="https://raw.githubusercontent.com/script-1024/genshin-miliastra-file-format/refs/heads/main/res/style.css"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@32,320,0,0"/>
-</head>
-
-<h1>
-Miliastra Wonderland Export File Format Documentation
-</h1>
+# Miliastra Wonderland Export File Format Documentation
 
 English | [中文](/README_CN.md)
 
