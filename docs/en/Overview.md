@@ -1,4 +1,4 @@
-# Miliastra Wonderland Export File Format Documentation
+# Overview
 
 ### Encoding
 - The Protocol Buffers (Protobuf) library is used for data serialization and deserialization. If you are unfamiliar with this, please refer to the [official documentation](https://protobuf.dev/programming-guides/encoding/).
@@ -19,6 +19,25 @@ Whether it's a `.gip` (Project), `.gil` (Level), `.gia` (Asset), or `.gir` (Runt
 
 [Tail Magic Number: 4 bytes]
 (End)
+```
+
+This can be represented by the following code:
+
+```c#
+public enum GiFileType {
+    Unknown = 0,
+    Gip = 1,
+    Gil = 2,
+    Gia = 3,
+    Gir = 4
+}
+
+public abstract class GiFile {
+    public uint Version { get; protected set; }
+    public GiFileType Type { get; }
+    public uint HeadMagicNumber => 0x0326;
+    public uint TailMagicNumber => 0x0679;
+}
 ```
 
 These fields are stored in big-endian order. Their meanings and uses will be explained in detail below.
@@ -66,7 +85,7 @@ This is a minimal example of a valid GIA file that can pass game verification, b
 
 | Field             | Value       | Description |
 |:------------------|:------------|:-----------:|
-| File Size         |`00 00 00 14`| 14 bytes    |
+| File Size         |`00 00 00 14`| 20 bytes    |
 | Version Number    |`00 00 00 01`| 1           |
 | Head Magic Number |`00 00 03 26`| Correct ✅  |
 | File Type         |`00 00 00 03`| GIA File    |
