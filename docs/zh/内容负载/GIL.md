@@ -94,6 +94,7 @@ public partial class GilFile : GiFile {
 
     // id = 38
     // 未知字段
+}
 ```
 
 ## 字段说明
