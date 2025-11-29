@@ -5,8 +5,7 @@
 
 ## 类型定义
 ```c#
-public enum AssetCategory : byte
-{
+public enum AssetCategory : byte {
     Special       = 0,  // 特殊类型
     Prefab        = 1,  // 预制体（元件）、玩家模板或角色模板
     Entity        = 2,  // 实体或造物

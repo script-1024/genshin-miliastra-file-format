@@ -5,8 +5,7 @@
 
 ## 类型定义
 ```c#
-public enum AssetSpecialType : byte
-{
+public enum AssetSpecialType : byte {
     Unknown   = 0,
     Default   = 1,
     NodeGraph = 5,

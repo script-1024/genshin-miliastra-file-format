@@ -5,8 +5,7 @@
 
 ## 类型定义
 ```c#
-public enum AssetType : byte
-{
+public enum AssetType : byte {
     Unknown         = 0,  // 未知类型
     Prefab          = 1,  // 预制体（元件）
     Creation        = 2,  // 造物

@@ -29,7 +29,7 @@ public struct AssetInfo {
 - 类型：枚举\<[`AssetCategory`](/docs/zh/类型定义/AssetCategory.md)>
 - 资产的主要类别
 - 大部分资产通过此字段区分类别
-- 仅当此字段为 `AssetCategory.Special`时（也就是 0），`SpecialType` 才有意义
+- 仅当此字段为 `AssetCategory.Special` 时（也就是 0），`SpecialType` 才有意义
 - 当此字段为 0 时可能被省略，具体可见[此处说明](/docs/zh/Protobuf%20简介.md#注意事项)，这是为了减小文件体积所做的优化
 
 ### Guid
