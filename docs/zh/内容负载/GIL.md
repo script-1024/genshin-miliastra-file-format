@@ -15,16 +15,16 @@ public partial class GilFile : GiFile {
     // 未知字段
 
     // id = 4, type = LENGTH
-    public IList<Component> Components;
+    public List<Component> Components;
 
     // id = 5, type = LENGTH
-    public IList<Entity> Entities;
+    public List<Entity> Entities;
 
     // id = 6, type = LENGTH
-    public IList<Category> Categories;
+    public List<Category> Categories;
 
     // id = 7, type = LENGTH
-    public IList<Terrain> Terrains;
+    public List<Terrain> Terrains;
 
     // id = 8
     // 似乎也是元件数据? 还需要进一步研究
@@ -54,7 +54,7 @@ public partial class GilFile : GiFile {
     // 未知字段
 
     // id = 18, type = LENGTH
-    public IList<Camera> CameraTemplates;
+    public List<Camera> CameraTemplates;
 
     // id = 21
     // 未知字段
@@ -69,7 +69,7 @@ public partial class GilFile : GiFile {
     public PeripheralSystem PeripheralSystem;
 
     // id = 27, type = LENGTH
-    public IList<Component> Decorations;
+    public List<Component> Decorations;
 
     // id= 29， type = LENGTH
     public EditorInfo EditorInfo;
