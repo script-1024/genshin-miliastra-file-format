@@ -5,31 +5,31 @@
 
 ## 类型定义
 ```c#
-public partial class GiaFile : GiFile {
+public sealed class GiaFile : GiFile {
     public override GiFileType Type => GiFileType.Gia;
 
     // id = 1, type = LENGTH
-    public IList<Asset>? Assets;
+    public List<Asset> Assets;
     
     // id = 2, type = LENGTH
-    public IList<Asset>? DependentAssets;
+    public List<Asset>? RelatedAssets;
     
     // id = 3, type = LENGTH
-    public string? ExportInfo;
+    public string ExportInfo;
 }
 ```
 
 ## 字段说明
 
 ### Assets
-- 类型：列表
+- 类型：列表\<[Asset](/docs/zh/类型定义/Asset.md)>
 - 一个或多个资产定义对象
-- 通常是玩家在「资产导入导出界面」中显式导出的元件
+- 玩家在「资产导入导出界面」选中导出的资产
 
-### DependentAssets
-- 类型：列表
-- 依赖的资产对象，此项可能不存在
-- 通常是那些在导出时没被玩家选中，但其他组件必须依赖它才能运作的元件
+### RelatedAssets
+- 类型：列表\<[Asset](/docs/zh/类型定义/Asset.md)>
+- 关联资产列表，此项可能不存在
+- 被其他模块依赖、无法单独导出的资产（比如装饰物）
 
 ### ExportInfo
 - 类型：字符串
