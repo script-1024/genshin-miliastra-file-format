@@ -17,6 +17,7 @@ public enum AssetCategory : byte {
     UI            = 8,  // 界面布局或交互控件
     PresetPoint   = 9,  // 预设点
     // ???
+    Decoration    = 14, // 装饰物
     Structure     = 15, // 结构体
 }
 ```
