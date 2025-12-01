@@ -23,7 +23,7 @@ public struct AssetInfo {
 - 类型：枚举\<[`AssetSpecialType`](/docs/zh/类型定义/AssetSpecialType.md)>
 - 资产的特殊类型
 - 绝大多数时候此字段都被设为 `AssetSpecialType.Default`（也就是 1）
-- 目前仅发现节点图、服务器信号、结构体定义和主镜头配置具有不同的值
+- 目前仅发现节点图、服务器信号、结构体定义、全局计时器和主镜头配置具有不同的值
 
 ### Category
 - 类型：枚举\<[`AssetCategory`](/docs/zh/类型定义/AssetCategory.md)>

@@ -6,11 +6,12 @@
 ## 类型定义
 ```c#
 public enum AssetSpecialType : byte {
-    Unknown   = 0,
-    Default   = 1,
-    NodeGraph = 5,
-    Composite = 23,
-    Camera    = 25,
+    Unknown     = 0,
+    Default     = 1,
+    NodeGraph   = 5,
+    Composite   = 23,
+    GlobalTimer = 24,
+    Camera      = 25,
 }
 ```
 
@@ -30,6 +31,9 @@ public enum AssetSpecialType : byte {
 ### Composite
 - 复合节点、服务器信号或结构体定义
 - 其实每个信号和结构体只是定义了专门用来操作它们的特殊节点而已
+
+### GlobalTimer
+- 全局计时器
 
 ### Camera
 - 主镜头配置
