@@ -1,8 +1,0 @@
-syntax = "proto3";
-
-enum PlatformType {
-    KEYBOARD = 0;
-    TOUCHSCREEN = 1;
-    CONTROLLER_CONSOLE = 2;
-    CONTROLLER_MOBILE = 3;
-}

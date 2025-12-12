@@ -1,6 +1,5 @@
 syntax = "proto3";
 import "basic/wrapper.proto";
-import "types/platform_type.proto";
 import "types/rect_transform.proto";
 
 message UiControlGroup {
@@ -86,6 +85,13 @@ message Transform {
         message Platform {
             PlatformType platform_type = 501;
             RectTransform transform = 502;
+
+            enum PlatformType {
+                KEYBOARD = 0;
+                TOUCHSCREEN = 1;
+                CONTROLLER_CONSOLE = 2;
+                CONTROLLER_MOBILE = 3;
+            }
         }
     }
 
