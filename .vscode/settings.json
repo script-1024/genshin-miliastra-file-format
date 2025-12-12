@@ -1,3 +1,4 @@
 {
-    "markdown.extension.completion.root": "${workspaceFolder}"
+    "markdown.extension.completion.root": "${workspaceFolder}",
+    "protobuf.protoc.options": [ "--proto_path=${workspaceFolder}/proto" ]
 }

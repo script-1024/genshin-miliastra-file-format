@@ -1,0 +1,6 @@
+.vscode/
+gen/
+
+*.bat
+*.ps1
+*.sh
