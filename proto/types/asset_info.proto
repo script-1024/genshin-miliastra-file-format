@@ -1,0 +1,10 @@
+syntax = "proto3";
+import "types/asset_special_type.proto";
+import "types/asset_category.proto";
+
+message AssetInfo {
+    reserved 1;
+    AssetSpecialType special_type = 2;
+    AssetCategory category = 3;
+    uint32 guid = 4;
+}

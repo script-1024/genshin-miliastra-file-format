@@ -1,0 +1,30 @@
+syntax = "proto3";
+import "types/asset_info.proto";
+import "types/asset_type.proto";
+
+message Asset {
+    AssetInfo info = 1;
+    repeated AssetInfo related = 2;
+    string name = 3;
+    reserved 4;
+    AssetType type = 5;
+
+    oneof content {
+        //EntityDefinition entity = 11;
+        // ??? = 12;
+        //NodeGraph node_graph = 13;
+        //CompositeDefinition composite = 14;
+        //Configuration config = 15;
+        //Terrain terrain = 16;
+        //Camera camera = 17;
+        //PresetPoint point = 18;
+        //UiControlGroup ui = 19;
+        //GlobalTimer timer = 20;
+        // ??? = 21;
+        //StructureDefinition struct = 22;
+        //Path path = 23;
+        // ???
+        //UnitTag unit_tag = 26;
+        //EntityDeploymentGroup deployment = 27;
+    }
+}

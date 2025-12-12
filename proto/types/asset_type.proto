@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+enum AssetType {
+    UNKNOWN_TYPE            = 0;  // 未知类型
+    PREFAB                  = 1;  // 预制体（元件）
+    CREATION                = 2;  // 造物
+    ENTITY                  = 3;  // 实体
+    // ???                  = 4;
+    TERRAIN                 = 5;  // 地形
+    PRESET_POINT            = 6;  // 预设点
+    UNIT_STATUS             = 7;  // 单位状态
+    SKILL                   = 8;  // 技能
+    ENTITY_NODE_GRAPH       = 9;  // 实体节点图
+    BOOLEAN_FILTER          = 10; // 布尔过滤器
+    SKILL_NODE_GRAPH        = 11; // 技能节点图
+    COMPOSITE_NODE          = 12; // 复合节点 (含监听信号、修改/拆分/拼装结构体)
+    CAMERA                  = 13; // 镜头
+    SIGNAL                  = 14; // 信号 (发送信号、向服务器节点图发送信号)
+    UI_CONTROL              = 15; // 交互控件
+    SKILL_RESOURCE          = 16; // 技能资源
+    // ???                  = 17;
+    PLAYER                  = 18; // 玩家模板
+    CHARACTER               = 19; // 角色模板
+    INTERFACE_LAYOUT        = 20; // 界面布局
+    UI_CONTROL_GROUP        = 21; // 界面控件组
+    STATUS_NODE_GRAPH       = 22; // 状态节点图
+    CLASS_NODE_GRAPH        = 23; // 职业节点图
+    GLOBAL_TIMER            = 24; // 全局计时器
+    // ???                  = 25;
+    ITEM                    = 26; // 道具
+    // ???                  = 27;
+    DECORATION              = 28; // 装饰物
+    STRUCTURE               = 29; // 结构体
+    SHOP                    = 30; // 商店
+    // ???
+    PATH                    = 38; // 路径
+    SHIELD                  = 39; // 护盾
+    // ???
+    ENTITY_DEPLOYMENT_GROUP = 43; // 实体布设组
+    UNIT_TAG                = 44; // 单位标签
+    SCAN_TAG                = 45; // 扫描标签
+    ITEM_NODE_GRAPH         = 46; // 道具节点图
+    INTEGER_FILTER          = 47; // 整数过滤器
+    LIGHT_SOURCE            = 48; // 光源
+    ENVIRONMENT             = 49; // 环境配置
+}

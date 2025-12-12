@@ -1,0 +1,8 @@
+syntax = "proto3";
+import "types/asset.proto";
+
+message GiaFile {
+    repeated Asset assets = 1;
+    repeated Asset related = 2;
+    string export_info = 3;
+}
