@@ -36,7 +36,7 @@ Varint 不使用固定的 32 位或 64 位整数，而是按需在每个字节�
   // 使用 GCC 扩展方法
   int size_of_varint_buffer_gcc(uint64_t value) {
       if (!value) return 1;
-      int bits = 64 - __builtin_clz(value);
+      int bits = 64 - __builtin_clzll(value);
       return (bits + 6) / 7;
   }
   // 独立实现

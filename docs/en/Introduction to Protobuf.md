@@ -42,7 +42,7 @@ Calculate the required buffer size:
   // Using GCC extended methods
   int size_of_varint_buffer_gcc(uint64_t value) {
       if (!value) return 1;
-      int bits = 64 - __builtin_clz(value);
+      int bits = 64 - __builtin_clzll(value);
       return (bits + 6) / 7;
   }
   // Independent implementation
