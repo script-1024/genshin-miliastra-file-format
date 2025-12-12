@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+message Vector2 {
+    float x = 501;
+    float y = 502;
+}

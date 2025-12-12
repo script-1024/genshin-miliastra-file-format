@@ -5,7 +5,6 @@ enum AssetType {
     PREFAB                  = 1;  // 预制体（元件）
     CREATION                = 2;  // 造物
     ENTITY                  = 3;  // 实体
-    // ???                  = 4;
     TERRAIN                 = 5;  // 地形
     PRESET_POINT            = 6;  // 预设点
     UNIT_STATUS             = 7;  // 单位状态
@@ -18,7 +17,6 @@ enum AssetType {
     SIGNAL                  = 14; // 信号 (发送信号、向服务器节点图发送信号)
     UI_CONTROL              = 15; // 交互控件
     SKILL_RESOURCE          = 16; // 技能资源
-    // ???                  = 17;
     PLAYER                  = 18; // 玩家模板
     CHARACTER               = 19; // 角色模板
     INTERFACE_LAYOUT        = 20; // 界面布局
@@ -26,16 +24,12 @@ enum AssetType {
     STATUS_NODE_GRAPH       = 22; // 状态节点图
     CLASS_NODE_GRAPH        = 23; // 职业节点图
     GLOBAL_TIMER            = 24; // 全局计时器
-    // ???                  = 25;
     ITEM                    = 26; // 道具
-    // ???                  = 27;
     DECORATION              = 28; // 装饰物
     STRUCTURE               = 29; // 结构体
     SHOP                    = 30; // 商店
-    // ???
     PATH                    = 38; // 路径
     SHIELD                  = 39; // 护盾
-    // ???
     ENTITY_DEPLOYMENT_GROUP = 43; // 实体布设组
     UNIT_TAG                = 44; // 单位标签
     SCAN_TAG                = 45; // 扫描标签
@@ -43,4 +37,5 @@ enum AssetType {
     INTEGER_FILTER          = 47; // 整数过滤器
     LIGHT_SOURCE            = 48; // 光源
     ENVIRONMENT             = 49; // 环境配置
+    reserved 4, 17, 25, 27, 31 to 37, 40 to 42;
 }

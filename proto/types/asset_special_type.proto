@@ -3,10 +3,9 @@ syntax = "proto3";
 enum AssetSpecialType {
     AST_UNKNOWN      = 0;
     AST_DEFAULT      = 1;
-    reserved 2 to 4;
     AST_NODE_GRAPH   = 5;
-    reserved 6 to 22;
     AST_COMPOSITE    = 23;
     AST_GLOBAL_TIMER = 24;
     AST_CAMERA       = 25;
+    reserved 2 to 4, 6 to 22;
 }

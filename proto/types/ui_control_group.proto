@@ -1,0 +1,105 @@
+syntax = "proto3";
+import "basic/guid_list.proto";
+import "basic/guid.proto";
+import "basic/int32.proto";
+import "basic/string.proto";
+import "types/platform_type.proto";
+import "types/rect_transform.proto";
+
+message UiControlGroup {
+    ContentWrapper content = 1;
+
+    message ContentWrapper {
+        uint32 guid = 501;
+        repeated Info info = 502;
+        repeated uint32 children = 503;
+        uint32 parent = 504;
+        repeated Data data = 505;
+
+        message Info {
+            oneof value {
+                Guid guid = 11;
+                Int32 index = 12;
+                GuidList related = 14;
+                string empty15 = 15; // -> #17
+                string empty16 = 16; // -> #15
+            }
+
+            int32 field501 = 501; // #11:1, #12:2, #14:4, #15:5, #16:6
+            int32 field502 = 502; // #11:5, #12:6, #14:4, #15:7, #16:13
+            Details details = 503; // It only exists when field #15 or #16 is set.  
+
+            message Details {
+                oneof value {
+                    string empty15 = 15;
+                    string empty17 = 17;
+                }
+
+                int32 field501 = 501; // #15:6,  #17:8
+                int32 field502 = 502; // #15:13, #17:7
+                int32 field503 = 503; // #15:1,  #17:1
+            }
+        }
+
+        message Data {
+            oneof value {
+                Transform transform = 11;
+                String name = 12;
+                Int32 builtin_id = 13;
+                Field14 field14 = 14;
+                string empty19 = 19;
+            }
+            
+            int32 field501 = 501; // #11:1,     #12:2,  #13:3,  #14:4,  #19:9
+            int32 field502 = 502; // #11:11/12, #12:15, #13:9,  #14:23, #19:25
+            Details details = 503; // It only exists when field #11, #14 or #19 is set.
+
+            message Field14 {
+                string empty15 = 15;
+                int32 field501 = 501; // 5
+            }
+
+            message Details {
+                oneof value {
+                    Transform transform = 13;
+                    Field14 field14 = 14;
+                    TextBox textbox = 19;
+                }
+
+                int32 field501 = 501; // #13:4,     #14:5,  #19:10
+                int32 field502 = 502; // #13:11/12, #14:23, #19:25
+                int32 field503 = 503; // #13:1,     #14:1,  #19:1
+            }            
+        }
+    }
+}
+
+message Transform {
+    oneof value {
+        string empty11 = 11; // builtin
+        MultiPlatform multi_platform = 12; // custom
+    }
+
+    ControlType type = 501;
+
+    message MultiPlatform {
+        repeated Platform platforms = 501;
+        int32 field502 = 502; // 3
+
+        message Platform {
+            PlatformType platform_type = 501;
+            RectTransform transform = 502;
+        }
+    }
+
+    enum ControlType {
+        UNKNOWN_CONTROL = 0;
+        BUILTIN_CONTROL = 1;
+        CUSTOM_CONTROL = 2;
+    }
+}
+
+message TextBox {
+    int32 font_size = 502;
+    String text = 505;
+}

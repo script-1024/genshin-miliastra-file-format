@@ -1,0 +1,12 @@
+syntax = "proto3";
+import "basic/vector2.proto";
+import "basic/vector3.proto";
+
+message RectTransform {
+    Vector3 scale = 501;
+    Vector2 anchor_min = 502; // 锚点左下角
+    Vector2 anchor_max = 503; // 锚点右上角
+    Vector2 offset = 504;
+    Vector2 size = 505;
+    Vector2 pivot = 506;
+}

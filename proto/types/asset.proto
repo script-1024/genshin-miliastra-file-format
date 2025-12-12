@@ -1,6 +1,7 @@
 syntax = "proto3";
 import "types/asset_info.proto";
 import "types/asset_type.proto";
+import "types/ui_control_group.proto";
 
 message Asset {
     AssetInfo info = 1;
@@ -18,7 +19,7 @@ message Asset {
         //Terrain terrain = 16;
         //Camera camera = 17;
         //PresetPoint point = 18;
-        //UiControlGroup ui = 19;
+        UiControlGroup ui = 19;
         //GlobalTimer timer = 20;
         // ??? = 21;
         //StructureDefinition struct = 22;

@@ -1,0 +1,5 @@
+syntax = "proto3";
+
+message GuidList {
+    repeated uint32 value = 501;
+}
