@@ -1,5 +1,0 @@
-syntax = "proto3";
-
-message Guid {
-    uint32 value = 501;
-}

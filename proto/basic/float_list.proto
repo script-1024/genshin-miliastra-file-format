@@ -1,0 +1,5 @@
+syntax = "proto3";
+
+message FloatList {
+    repeated float value = 1;
+}

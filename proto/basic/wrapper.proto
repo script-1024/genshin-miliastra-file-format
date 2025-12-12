@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+message Wrapper {
+    message String {
+        string value = 501;
+    }
+
+    message Int32 {
+        int32 value = 501;
+    }
+
+    message Guid {
+        uint32 value = 501;
+    }
+
+    message GuidList {
+        repeated uint32 value = 501;
+    }
+}

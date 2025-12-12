@@ -1,0 +1,5 @@
+syntax = "proto3";
+
+message StringList {
+    repeated string value = 1;
+}

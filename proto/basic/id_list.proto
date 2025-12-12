@@ -1,0 +1,5 @@
+syntax = "proto3";
+
+message IdList {
+    repeated uint32 value = 1;
+}

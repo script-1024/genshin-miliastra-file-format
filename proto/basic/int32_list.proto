@@ -1,0 +1,5 @@
+syntax = "proto3";
+
+message Int32List {
+    repeated int32 value = 1;
+}

@@ -1,8 +1,5 @@
 syntax = "proto3";
-import "basic/guid_list.proto";
-import "basic/guid.proto";
-import "basic/int32.proto";
-import "basic/string.proto";
+import "basic/wrapper.proto";
 import "types/platform_type.proto";
 import "types/rect_transform.proto";
 
@@ -18,9 +15,9 @@ message UiControlGroup {
 
         message Info {
             oneof value {
-                Guid guid = 11;
-                Int32 index = 12;
-                GuidList related = 14;
+                Wrapper.Guid guid = 11;
+                Wrapper.Int32 index = 12;
+                Wrapper.GuidList related = 14;
                 string empty15 = 15; // -> #17
                 string empty16 = 16; // -> #15
             }
@@ -44,8 +41,8 @@ message UiControlGroup {
         message Data {
             oneof value {
                 Transform transform = 11;
-                String name = 12;
-                Int32 builtin_id = 13;
+                Wrapper.String name = 12;
+                Wrapper.Int32 builtin_id = 13;
                 Field14 field14 = 14;
                 string empty19 = 19;
             }
@@ -101,5 +98,5 @@ message Transform {
 
 message TextBox {
     int32 font_size = 502;
-    String text = 505;
+    Wrapper.String text = 505;
 }
